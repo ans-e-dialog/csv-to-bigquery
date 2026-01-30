@@ -33,7 +33,7 @@ Complete and run the following command to deploy the cloud function.
 
 ```console
 gcloud functions deploy csv_to_firestore \
-  --runtime python39 \
+  --runtime python312 \
   --trigger-resource YOUR_TRIGGER_BUCKET_NAME \
   --trigger-event google.storage.object.finalize \
   --entry-point csv_to_firestore_trigger \
