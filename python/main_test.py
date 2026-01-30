@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import datetime
+from datetime import timezone
 import io
 import os
 import sys
@@ -60,7 +61,8 @@ def test_violating_fs_constraints():
 
 def test_set_document():
   # set variables for testing
-  timestamp = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+  from datetime import timezone
+  timestamp = datetime.datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
   firestore_path = {
           "collection_id": 'test',
           "document_id": 'product_id'
