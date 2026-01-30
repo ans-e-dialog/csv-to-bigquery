@@ -23,7 +23,7 @@ from google.cloud import storage
 import pandas as pd
 
 StringIO = io.StringIO
-datetime = datetime.datetime
+from datetime import timezone  
 
 
 def csv_to_firestore_trigger(event, context):
